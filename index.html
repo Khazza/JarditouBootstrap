@@ -8,169 +8,198 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Jarditou - Page d'acceuil</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="#" />
   </head>
 
   <body>
+    <!-- start header -->
+    <header class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-3 d-none d-md-block">
+          <img
+            class="img-fluid w-50"
+            src="./src/img/jarditou_logo-removebg.png"
+            alt="logo"
+          />
+        </div>
+        <div class="col-md-9 text-md-end d-none d-md-block">
+          <h1 class="fs-3 mb-0">Tout le jardin</h1>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
     <!-- start nav top-->
-    <nav>
-      <div class="navbar">
-        <ul class="ultop">
-          <li id="indexId">
-            <a href="index.html" title="Acceuil active" class="active"
-              >Acceuil</a
-            >
-          </li>
-          <li><a href="tableau.html">Tableau</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Jarditou.com</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Acceuil</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./tableau.html">Tableau</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              fluid
+              placeholder="Votre promotion"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Rechercher
+            </button>
+          </form>
+        </div>
       </div>
     </nav>
     <!-- end nav top -->
 
-    <section class="complete">
-      <!-- start header -->
-      <header>
-        <div class="tete">
-          <img
-            class="logo"
-            src="src/img/jarditou_logo-removebg.png"
-            alt="logo_jarditou"
-            title="Logo Jarditou"
-          />
-          <div class="slogan">
-            <p>Tout le jardin</p>
-          </div>
-        </div>
-      </header>
-      <!-- end header -->
-
-      <!-- promotion -->
+    <!-- promotion -->
+    <div class="container-fluid px-0">
       <div class="imgpromo">
         <img
-          class="img1"
+          class="img1 w-100"
           src="src/img/promotion.jpg"
           alt="promotion"
           title="promotion"
         />
       </div>
-      <!-- end promotion -->
+    </div>
+    <!-- end promotion -->
 
-      <!-- heading article -->
-      <section class="withColumn">
-        <heading>
-          <div class="heading1">
-            <h1>Acceuil!</h1>
-            <hr />
+    <!-- heading article -->
+    <div class="global row g-0">
+      <div class="col-lg-8 col-md-12">
+        <article>
+          <div class="text-1">
+            <div class="article1" id="idArticle1">
+              <h2 class="chap">L'entreprise :</h2>
+              <p>
+                Notre entreprise familiale met tout son savoir-faire à votre
+                disposition dans le domaine du jardin et du paysagisme.<br /><br />
+                Créée il y à 70 ans, notre entreprise vend fleurs, arbustes,
+                matériel à main et motorisés.<br /><br />
+                Implantés à Amiens, nous intervenons dans tout le département de
+                la Somme : Albert, Doullens, Péronne, Abbeville, Corbie.
+              </p>
+            </div>
           </div>
-          <div class="global">
-            <article>
-              <div class="text-1">
-                <div class="article1" id="idArticle">
-                  <h2 class="chap">L'entreprise :</h2>
-                  <p>
-                    Notre entreprise familiale met tout son savoir-faire à votre
-                    disposition dans le domaine du jardin et du paysagisme.<br />
-                    Créée il y à 70 ans, notre entreprise vend fleurs, arbustes,
-                    matériel à main et motorisés.<br />
-                    Implantés à Amiens, nous intervenons dans tout le
-                    département de la Somme : Albert, Doullens, Péronne,
-                    Abbeville, Corbie.
-                  </p>
-                </div>
-                <img
-                  class="imgtext1"
-                  src="src/img/garden.jpg"
-                  alt="articleIllustration"
-                  title="Illustration1"
-                  width="512"
-                  height="339"
-                />
-              </div>
-            </article>
+        </article>
 
-            <br />
-            <hr class="sepa" />
-            <br />
+        <br />
+        <hr class="sepa" />
+        <br />
 
-            <article>
-              <div class="text-2">
-                <div class="espaceimg">
-                  <img
-                    class="imgtext2"
-                    src="src/img/vegetables.jpg"
-                    alt="articleIllustration"
-                    title="Illustration2"
-                    width="512"
-                    height="350"
-                  />
-                </div>
-                <div class="article2" id="idArticle">
-                  <h2 class="chap">Qualité :</h2>
-                  <p>
-                    Nous mettons à votre disposition un service personnalisé,
-                    avec un seul interlocuteur durant tout votre projet.<br />
-                    Vous serez séduit par notre expertise, nos compétences et
-                    notre sérieux.<br />
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article>
-              <br />
-              <hr class="sepa" />
-              <br />
-              <div class="text-3">
-                <div class="article3" id="idArticle">
-                  <h2 class="chap">Devis gratuit :</h2>
-                  <p>
-                    Vous pouvez bien sûr nous contacter pour de plus amples
-                    informations ou pour une demande d'intervention. Vous
-                    souhaitez un devis? Nous vous en réalisons gratuitement.<br />
-                  </p>
-                </div>
-
-                <img
-                  class="imgtext3"
-                  src="src/img/sunflower.jpg"
-                  alt="articleIllustration"
-                  title="Illustration3"
-                  width="512"
-                  height="341"
-                />
-              </div>
-            </article>
+        <article>
+          <div class="text-2">
+            <div class="article2" id="idArticle2">
+              <h2 class="chap">Qualité :</h2>
+              <p>
+                Nous mettons à votre disposition un service personnalisé, avec
+                un seul interlocuteur durant tout votre projet.<br />
+                Vous serez séduit par notre expertise, nos compétences et notre
+                sérieux.<br />
+              </p>
+            </div>
           </div>
-        </heading>
-        <!-- end heading -->
+        </article>
 
-        <!-- start grey column -->
-        <div class="column"></div>
-        <!-- end column -->
-      </section>
-      <br />
-    </section>
-
-    <!-- start footer -->
-    <section class="endpage">
-      <div class="socialmedia">
-        <a href="https://fb.com/" class="fa fa-facebook">Facebook</a>
-        <a href="https://instagram.com" class="fa fa-instagram">Instagram</a>
-        <a href="https://twitter.com" class="fa fa-twitter">Twitter</a>
-        <a href="https://youtube.com" class="fa fa-youtube">Youtube</a>
+        <article>
+          <br />
+          <hr class="sepa" />
+          <br />
+          <div class="text-3">
+            <div class="article3" id="idArticle3">
+              <h2 class="chap">Devis gratuit :</h2>
+              <p>
+                Vous pouvez bien sûr nous contacter pour de plus amples
+                informations ou pour une demande d'intervention. Vous souhaitez
+                un devis? Nous vous en réalisons gratuitement.
+                <br />
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit ut esse veniam, veritatis voluptatum earum placeat modi
+                id necessitatibus. Ipsam reiciendis atque sequi magnam minima,
+                nesciunt libero exercitationem possimus fugiat quis vel porro
+                veritatis eum ratione neque aut doloremque facere tempore
+                placeat id delectus. Nulla quo sapiente molestias error!
+                Asperiores laboriosam deserunt at perferendis ipsa? Voluptatem,
+                et rerum deleniti excepturi sed tempora placeat.
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
-      <footer>
-        <ul class="ulbot">
-          <li><a href="#">Mentions Légales</a></li>
-          <li><a href="#">Horaires</a></li>
-          <li><a href="#">Plan du site</a></li>
-        </ul>
-      </footer>
-    </section>
-    <!-- end footer -->
+      <div class="col-lg-4 col-md-12 bg-warning fw-bold text-center">
+        [Colonne de droite]
+      </div>
+    </div>
+    <!-- end heading -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+    <br />
+
+    <!-- start nav bottom -->
+    <footer>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScrollBottom"
+            aria-controls="navbarScrollBottom"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScrollBottom">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 dropdown-menu-bottom">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mentions Légales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Horaires</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Plan du site</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <!-- end nav bottom -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/exo.js"></script>
   </body>
 </html>
