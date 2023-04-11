@@ -67,7 +67,6 @@
               <input
                 class="form-control me-2"
                 type="search"
-                fluid
                 placeholder="Votre promotion"
                 aria-label="Search"
               />
@@ -91,145 +90,190 @@
 
       <!-- Main -->
       <div class="row">
-          <form
-            action="contact.php"
-            method="get"
-            id="formulaire_contact"
-            enctype="multipart/form-data"
-          >
-          <br>
+        <form
+          action="contact.php"
+          method="get"
+          id="formulaire_contact"
+          enctype="multipart/form-data"
+        >
+          <br />
+          <div class="form-group">
+            <label>* Ces zones sont obligatoires</label><br />
+          </div>
+          <br />
+          <fieldset>
+            <legend>Vos coordonnées</legend>
             <div class="form-group">
-              <label>* Ces zones sont obligatoires</label><br />
+              <label for="nom">Nom *:</label>
+              <input
+                type="text"
+                name="nom"
+                id="nom"
+                class="form-control"
+                required
+                placeholder="Entrez votre nom"
+              />
+              <div class="invalid-feedback">Veuillez entrer votre nom.</div>
             </div>
-            <br>
-            <fieldset>
-              <legend>Vos coordonnées</legend>
-              <div class="form-group">
-                <label for="nom">Nom *:</label>
+            <br />
+            <div class="form-group">
+              <label for="prenom">Prénom *:</label>
+              <input
+                type="text"
+                name="prenom"
+                id="prenom"
+                class="form-control"
+                required
+                placeholder="Entrez votre prénom"
+              />
+              <div class="invalid-feedback">Veuillez entrer votre prénom.</div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="genre">Sexe *:</label>
+              <div>
                 <input
-                  type="text"
-                  name="nom"
-                  id="nom"
-                  title="Ce champ est obligatoire"
-                  placeholder="Entrez votre nom"
+                  type="radio"
+                  name="genre"
+                  value="feminin"
+                  required
+                  id="feminin"
+                  class="form-check-input"
                 />
-              </div>
-              <br />
-              <div class="form-group">
-                <label for="prenom">Prénom *:</label>
+                <label for="feminin" class="form-check-label">Féminin</label>
                 <input
-                  type="text"
-                  name="prenom"
-                  id="prenom"
-                  title="Ce champ est obligatoire"
-                  placeholder="Entrez votre prénom"
+                  type="radio"
+                  name="genre"
+                  value="masculin"
+                  required
+                  id="masculin"
+                  class="form-check-input"
                 />
-              </div>
-              <br />
-              <div class="form-group">
-                <label for="genre">Sexe *:</label>
-                <div>
-                  <input
-                    type="radio"
-                    name="genre"
-                    value="feminin"
-                    title="Ce champ est obligatoire"
-                    id="feminin"
-                  />
-                  <label for="feminin">Féminin</label>
-                  <input
-                    type="radio"
-                    name="genre"
-                    value="masculin"
-                    title="Ce champ est obligatoire"
-                    id="masculin"
-                  />
-                  <label for="masculin">Masculin</label>
+                <label for="masculin" class="form-check-label">Masculin</label>
+                <div class="invalid-feedback">
+                  Veuillez sélectionner votre sexe.
                 </div>
               </div>
-              <br />
-              <div class="form-group">
-                <label for="date">Date de naissance *:</label>
-                <input
-                  type="date"
-                  name="ddn"
-                  id="date"
-                  title="Ce champ est obligatoire"
-                />
-              </div>
-              <br />
-              <div class="form-group">
-                <label for="cp">Code postal *:</label>
-                <input
-                  type="text"
-                  name="cp"
-                  id="cp"
-                  title="Ce champ est obligatoire"
-                  placeholder="Entrez votre code postal"
-                />
-              </div>
-              <br />
-              <div class="form-group">
-                <label for="adresse">Adresse *:</label>
-                <input
-                  type="text"
-                  name="adresse"
-                  id="adresse"
-                  title="Ce champ est obligatoire"
-                  placeholder="Entrez votre adresse"
-                />
-              </div>
-              <br />
-              <div class="form-group">
-                <label for="ville">Ville *:</label>
-                <input
-                  type="text"
-                  name="ville"
-                  id="ville"
-                  title="Ce champ est obligatoire"
-                  placeholder="Entrez votre ville"
-                />
-              </div>
-              <br />
-              <div class="form-group">
-                <label for="email">Email *:</label>
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  title="Ce champ est obligatoire"
-                  placeholder="Entrez votre email"
-                />
-              </div>
-              <br />
-            </fieldset>
-            <fieldset>
-              <legend>Votre demande</legend>
-              <label for="sujet">Sujet *:</label>
-              <select name="sujet" id="sujet">
-                <option value="" disabled selected>
-                  Veuillez sélectionner un sujet
-                </option>
-                <option value="mescommandes">Mes commandes</option>
-                <option value="question">Question sur un produit</option>
-                <option value="reclamation">Réclamation</option>
-                <option value="autres">Autres</option>
-              </select>
-              <br /><br />
-              <label for="commentaire">Votre question *:</label>
-              <textarea name="commentaire" rows="2" cols="20"></textarea>
-              <br /><br />
-              <input type="checkbox" name="validation" value="validation" />*
-              J'accepte le traitement informatique de ce formulaire
-            </fieldset>
-            <br />
-            <div class="controls">
-              <input type="submit" value="Envoyer" />
-              <input type="reset" id="reset" value="Annuler" />
             </div>
-          </form>
+            <br />
+            <div class="form-group">
+              <label for="date">Date de naissance *:</label>
+              <input
+                type="date"
+                name="ddn"
+                id="date"
+                class="form-control"
+                required
+              />
+              <div class="invalid-feedback">
+                Veuillez entrer votre date de naissance.
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="cp">Code postal *:</label>
+              <input
+                type="text"
+                name="cp"
+                id="cp"
+                class="form-control"
+                required
+                placeholder="Entrez votre code postal"
+              />
+              <div class="invalid-feedback">
+                Veuillez entrer votre code postal.
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="adresse">Adresse *:</label>
+              <input
+                type="text"
+                name="adresse"
+                id="adresse"
+                class="form-control"
+                required
+                placeholder="Entrez votre adresse"
+              />
+              <div class="invalid-feedback">Veuillez entrer votre adresse.</div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="ville">Ville *:</label>
+              <input
+                type="text"
+                name="ville"
+                id="ville"
+                class="form-control"
+                required
+                placeholder="Entrez votre ville"
+              />
+              <div class="invalid-feedback">Veuillez entrer votre ville.</div>
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="email">Email *:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                required
+                placeholder="Entrez votre email"
+              />
+              <div class="invalid-feedback">
+                Veuillez entrer une adresse email
+              </div>
+            </div>
+            <br />
+          </fieldset>
+          <fieldset>
+            <legend>Votre demande :</legend>
+            <label for="sujet" class="form-label">Sujet *:</label>
+            <select name="sujet" id="sujet" class="form-select" required>
+              <option value="" disabled selected>
+                Veuillez sélectionner un sujet
+              </option>
+              <option value="mescommandes">Mes commandes</option>
+              <option value="question">Question sur un produit</option>
+              <option value="reclamation">Réclamation</option>
+              <option value="autres">Autres</option>
+            </select>
+            <br /><br />
+            <label for="commentaire" class="form-label"
+              >Votre question *:</label
+            >
+            <textarea
+              name="commentaire"
+              rows="2"
+              cols="20"
+              class="form-control"
+              required
+            ></textarea>
+            <br /><br />
+            <div class="form-check">
+              <input
+                type="checkbox"
+                name="validation"
+                value="validation"
+                class="form-check-input"
+                required
+              />
+              <label class="form-check-label"
+                >* J'accepte le traitement informatique de ce formulaire</label
+              >
+            </div>
+          </fieldset>
+          <br />
+          <div class="controls">
+            <button type="submit" class="btn btn-primary bg-dark">Envoyer</button>
+            <button type="reset" id="reset" class="btn btn-secondary bg-dark">
+              Annuler
+            </button>
+          </div>
+        </form>
       </div>
-
+      <br />
 
       <!-- start nav bottom -->
       <footer>
